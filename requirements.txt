@@ -6,3 +6,5 @@ catboost
 scikit-learn
 joblib
 matplotlib
+label
+sqlalchemy
