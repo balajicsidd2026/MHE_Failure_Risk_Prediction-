@@ -182,13 +182,19 @@ with tab1:
             "Inspection Date",
             value=date.today()
         )
-        equipment_list = sorted(
-            dataset['Equipment_ID'].unique()
+        
+        equipment_type = st.selectbox(
+            "Equipment Type",
+            sorted(dataset["Equipment_Type"].unique())
         )
 
+        filtered_ids = (
+            dataset[dataset["Equipment_Type"] == equipment_type]["Equipment_ID"].unique()
+        )
+        
         equipment_id = st.selectbox(
             "Equipment ID",
-            equipment_list
+            sorted(filtered_ids)
         )
 
 
