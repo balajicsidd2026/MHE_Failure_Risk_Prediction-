@@ -185,7 +185,7 @@ with tab1:
         
         equipment_type = st.selectbox(
             "Equipment Type",
-            sorted(dataset["Equipment_Type"].unique())
+            sorted(dataset["Equipment_Type"].unique()),help="Type of airport ground support equipment."
         )
 
         filtered_ids = (
@@ -194,7 +194,7 @@ with tab1:
         
         equipment_id = st.selectbox(
             "Equipment ID",
-            sorted(filtered_ids)
+            sorted(filtered_ids),help="Unique identifier of the equipment."
         )
 
 
@@ -202,7 +202,7 @@ with tab1:
             "Equipment Age (Years)",
             min_value=0.0,
             max_value=30.0,
-            value=15.0
+            value=15.0,help=" Age of equipment in years.Higher age generally increases failure risk."
         )
 
         hydraulic_leak = st.selectbox(
