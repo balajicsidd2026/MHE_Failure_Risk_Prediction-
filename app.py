@@ -202,7 +202,7 @@ with tab1:
             "Equipment Age (Years)",
             min_value=0.0,
             max_value=30.0,
-            value=15
+            value=15.0
         )
 
         hydraulic_leak = st.selectbox(
