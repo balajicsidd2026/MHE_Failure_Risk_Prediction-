@@ -207,27 +207,27 @@ with tab1:
 
         hydraulic_leak = st.selectbox(
             "Hydraulic Leak Observed",
-            ["No", "Yes"]
+            ["No", "Yes"],help="Indicates whether a hydraulic leak was detected.- Yes = Higher risk - No = Lower risk"
         )
 
         consecutive_days = st.number_input(
             "Consecutive Working Days",
             min_value=0,
             max_value=60,
-            value=30
+            value=30,help="Number of days equipment operated without a break"
         )
         downtime_hours = st.number_input(
             "Downtime Hours Last 30 Days",
             min_value=0,
             max_value=100,
-            value=25
+            value=25,help="Total downtime during the last 30 days"
         )
         
         daily_operating_hours = st.slider(
             "Daily Operating Hours",
             0,
             24,
-            22
+            22,help="Average operating hours per day."
         )
 
     # --------------------------------------------
@@ -238,39 +238,39 @@ with tab1:
         cargo_weight = st.number_input(
             "Cargo Weight Handled (KG)",
             min_value=0,
-            max_value=50000,
-            value=45000
+            max_value=100000,
+            value=45000,help="Total cargo weight handled by equipment"
         )
         
         overload_count = st.number_input(
             "Overload Event Count",
             min_value=0,
             max_value=20,
-            value=10
+            value=10, help="Number of overload incidents recorded"
         )
 
         warning_count = st.number_input(
             "Warning Indicator Count",
             min_value=0,
             max_value=20,
-            value=10
+            value=10,help="Number of warning alerts generated"
         )
 
         outdoor_usage = st.selectbox(
             "Outdoor Usage",
-            ["No", "Yes"]
+            ["No", "Yes"],help="Whether equipment is frequently used outdoors"
         )
 
         peak_hour = st.selectbox(
             "Peak Hour Operations",
-            ["No", "Yes"]
+            ["No", "Yes"],help="Whether equipment operates during peak airport traffic periods"
         )
 
         uld_count = st.number_input(
             "ULD Handling Count",
             min_value=0,
             max_value=100,
-            value=90
+            value=90,help="Number of Unit Load Devices (ULDs) handled"
         )
 
     # ------------------------------------------------
