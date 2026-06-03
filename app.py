@@ -202,7 +202,7 @@ with tab1:
             "Equipment Age (Years)",
             min_value=0.0,
             max_value=30.0,
-            value=5.0
+            value=15
         )
 
         hydraulic_leak = st.selectbox(
@@ -214,20 +214,20 @@ with tab1:
             "Consecutive Working Days",
             min_value=0,
             max_value=60,
-            value=5
+            value=30
         )
         downtime_hours = st.number_input(
             "Downtime Hours Last 30 Days",
             min_value=0,
             max_value=100,
-            value=0
+            value=25
         )
         
         daily_operating_hours = st.slider(
             "Daily Operating Hours",
             0,
             24,
-            8
+            22
         )
 
     # --------------------------------------------
@@ -239,21 +239,21 @@ with tab1:
             "Cargo Weight Handled (KG)",
             min_value=0,
             max_value=50000,
-            value=10000
+            value=45000
         )
         
         overload_count = st.number_input(
             "Overload Event Count",
             min_value=0,
             max_value=20,
-            value=0
+            value=10
         )
 
         warning_count = st.number_input(
             "Warning Indicator Count",
             min_value=0,
             max_value=20,
-            value=0
+            value=10
         )
 
         outdoor_usage = st.selectbox(
@@ -270,7 +270,7 @@ with tab1:
             "ULD Handling Count",
             min_value=0,
             max_value=100,
-            value=20
+            value=90
         )
 
     # ------------------------------------------------
